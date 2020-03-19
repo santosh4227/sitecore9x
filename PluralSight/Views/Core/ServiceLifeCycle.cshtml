@@ -1,0 +1,10 @@
+﻿@using PluralSight.Services
+@model Tuple<GuidService, PluralSight.Services.SingletonService, PluralSight.Services.ScopeService>
+<h1>Transient GUID: @Model.Item1.GetGuid()</h1>
+
+<h1>Singleton GUID: @Model.Item2.GetGuid()</h1>
+
+<h1>Scoped GUID: @Model.Item3.GetGuid()</h1>
+
+<partial name="_ServiceLifeCycle" model="@Model" />
+

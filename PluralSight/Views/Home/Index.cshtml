@@ -1,0 +1,16 @@
+﻿@model HomeViewModel
+
+    <h4>@Model.NC.EnableBreadCrumb</h4>
+<partial name="_Carousel" />
+
+<h2>Pies of the week</h2>
+<h4>Our weekly selection - just for you!</h4>
+
+<div class="row">
+
+    @foreach (var pie in Model.PieOfTheWeeks)
+    {
+        <partial name="_PieCard" model="pie" />
+    }
+
+</div>
